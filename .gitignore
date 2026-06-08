@@ -1,55 +1,51 @@
-# Prerequisites
-*.d
+# Logs
+*.log
 
-# Object files
-*.o
-*.ko
-*.obj
-*.elf
+# Exports
+*.csv
+*.xlsx
+*.html
+*.json
 
-# Linker output
-*.ilk
-*.map
-*.exp
+# Temp folders
+temp/
+output/
+exports/
+logs/
 
-# Precompiled Headers
-*.gch
-*.pch
+# Archives
+*.zip
+*.7z
+*.rar
 
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
+# Temp files
+*.tmp
+*.temp
+*.bak
 
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
+# VS Code
+.vscode/
 
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
+# PowerShell
+*.ps1xml
 
-# Debug files
-*.dSYM/
-*.su
-*.idb
-*.pdb
+# Windows
+Thumbs.db
+Desktop.ini
 
-# Kernel Module Compile Results
-*.mod*
-*.cmd
-.tmp_versions/
-modules.order
-Module.symvers
-Mkfile.old
-dkms.conf
+# Credentials
+*.pfx
+*.pem
+*.key
+*.cer
+*.crt
+*.p12
+.env
 
-# debug information files
-*.dwo
+# Sensitive JSON files
+secrets.json
+credentials.json
+*.secrets.json
+
+# Mac/Linux
+.DS_Store
