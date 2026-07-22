@@ -55,6 +55,20 @@ xcopy C:\Windows\Minidump C:\Temp\CrashLogs\Dumps\Minidump /E /I /Y 2>nul
 xcopy C:\Windows\LiveKernelReports C:\Temp\CrashLogs\Dumps\LiveKernelReports /E /I /Y 2>nul
 copy C:\Windows\MEMORY.DMP C:\Temp\CrashLogs\Dumps\ 2>nul
 
+echo Collecting Intune app deployment logs...
+mkdir C:\Temp\CrashLogs\Intune 2>nul
+
+if exist "%ProgramData%\Microsoft\IntuneManagementExtension\Logs" (
+    xcopy "%ProgramData%\Microsoft\IntuneManagementExtension\Logs\*" "C:\Temp\CrashLogs\Intune\IME-Logs\" /E /I /H /Y 2>nul
+) else (
+    echo Intune Management Extension log folder was not found. > C:\Temp\CrashLogs\Intune\IME-Logs-Not-Found.txt
+)
+
+echo Exporting Intune and app deployment event logs...
+wevtutil epl "Microsoft-Windows-DeviceManagement-Enterprise-Diagnostics-Provider/Admin" "C:\Temp\CrashLogs\Intune\Intune-MDM-Admin.evtx" /ow:true 2>nul
+wevtutil epl "Microsoft-Windows-AppXDeploymentServer/Operational" "C:\Temp\CrashLogs\Intune\AppX-Deployment.evtx" /ow:true 2>nul
+wevtutil epl "Microsoft-Windows-AppxPackaging/Operational" "C:\Temp\CrashLogs\Intune\AppX-Packaging.evtx" /ow:true 2>nul
+
 echo Creating ZIP file...
 powershell.exe -NoProfile -ExecutionPolicy Bypass -Command "Compress-Archive -Path 'C:\Temp\CrashLogs\*' -DestinationPath 'C:\Temp\CrashLogs.zip' -Force"
 
