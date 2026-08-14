@@ -10,9 +10,7 @@ The toolkit is designed to help MSP support staff troubleshoot issues, collect c
 
 | Tool                                                                       | Description                                                                                                         |
 | -------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| [Collect All Device Logs](User-Device-Scripts/Collect-All-Device-Logs)     | Collects crash, Intune, application, event, and system logs when the issue is unclear or covers multiple areas.     |
 | [Collect Device Crash Logs](User-Device-Scripts/Collect-Device-Crash-Logs) | Collects Windows crash dumps, event logs, power information, drivers, and system details.                           |
-| [Collect Intune App Logs](User-Device-Scripts/Collect-Intune-App-Logs)     | Collects Intune and application deployment logs for failed installs, detection issues, and unexpected app removals. |
 | [Reset Outlook](User-Device-Scripts/Reset-Outlook)                         | Clears local Outlook cache and profile data to troubleshoot persistent client-side Outlook issues.                  |
 | [Reset Teams](User-Device-Scripts/Reset-Teams)                             | Clears local Microsoft Teams cache to resolve loading, sign-in, syncing, and stale-data issues.                     |
 
