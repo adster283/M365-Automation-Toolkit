@@ -9,24 +9,20 @@ For the investigation workflow, see [README.md](./README.md).
 ## Output
 
 ```text
-C:\Temp\CrashLogs.zip
+C:\Temp\CrashLogs
 ```
 
 ## Steps
-
-1. Copy the complete script below into Notepad.
-2. Save it as `Collect-Crash-Logs.cmd`.
-3. Right-click the saved file and select **Run as administrator**.
-4. Wait for the confirmation popup.
-5. Upload `C:\Temp\CrashLogs.zip` to the approved ticket or support location.
-
-Do not paste this script line-by-line into an open Command Prompt.
+1. Launch Admin CMD window
+2. Copy and paste the below script
+3. Let the script run until it says it is complete
+4. Copy the "C:\Temp\CrashLogs" folder to your laptop for investigation.
 
 The script automatically closes its elevated Command Prompt on success or failure.
 
 ## Script
 
-```bat
+```
 @echo off
 setlocal EnableExtensions EnableDelayedExpansion
 

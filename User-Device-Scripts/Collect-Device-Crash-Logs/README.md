@@ -52,9 +52,9 @@ The temporary working folder is:
 C:\Temp\CrashLogs
 ```
 
-Running the script again replaces the previous working folder and ZIP.
+Running the script again replaces the previous working folder and.
 
-Large `MEMORY.DMP` files can make the ZIP several gigabytes and can increase collection time.
+Large `MEMORY.DMP` files can make the folder several gigabytes and can increase collection time.
 
 ---
 
